@@ -48,8 +48,10 @@ export default function Home() {
         </Box>
         <Box>
           <ButtonGroup variant="outlined" aria-label="outlined button group">
-            {icons.map((icon) => (
-              <Button onClick={() => copyToClipboard(icon)}>{icon}</Button>
+            {icons.map((icon, i) => (
+              <Button key={i} onClick={() => copyToClipboard(icon)}>
+                {icon}
+              </Button>
             ))}
           </ButtonGroup>
         </Box>
